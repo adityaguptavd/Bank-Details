@@ -1,0 +1,17 @@
+{
+  "name": "bhartiya-banks",
+  "version": "1.0.0",
+  "description": "This project provides the details of banks operated in Bharat. This project uses a API provided by a GitHub repository in order to list details of banks.",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "author": "Aditya Gupta",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}

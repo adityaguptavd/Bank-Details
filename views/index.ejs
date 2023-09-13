@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Bank Details</h1>
+        <% if (locals.data == 404) { %>
+            <h2>No details found.</h2>
+
+        <% } else if (locals.data) { %>
+                <table>
+                    <%if (data.BANK) { %>
+                        <tr>
+                            <td>BANK NAME : </td>
+                            <td> <%= data.BANK %> </td>
+                        </tr>
+                    <% } %>
+                    <% if (data.BANKCODE) { %>
+                        <tr>
+                            <td>BANK CODE : </td>
+                            <td> <%= data.BANKCODE %> </td>
+                        </tr>
+                    <% } %>
+                    <% if (data.BRANCH) { %>
+                        <tr>
+                            <td>BRANCH : </td>
+                            <td> <%= data.BRANCH %> </td>
+                        </tr>
+                    <% } %>
+                    <% if (data.IFSC) { %>
+                        <tr>
+                            <td>IFSC CODE : </td>
+                            <td> <%= data.IFSC %> </td>
+                        </tr>
+                    <% } %>
+                    <% if (data.ADDRESS) { %>
+                        <tr>
+                            <td>BRANCH ADDRESS : </td>
+                            <td> <%= data.ADDRESS %> </td>
+                        </tr>
+                    <% } %>
+                    <% if (data.DISTRICT) { %>
+                        <tr>
+                            <td>DISTRICT : </td>
+                            <td> <%= data.DISTRICT %> </td>
+                        </tr>
+                    <% } %>
+                    <% if (data.STATE) { %>
+                        <tr>
+                            <td>STATE : </td>
+                            <td> <%= data.STATE %> </td>
+                        </tr>
+                    <% } %>
+                    <% if (data.CONTACT) { %>
+                        <tr>
+                            <td>CONTACT : </td>
+                            <td> <%= data.CONTACT %> </td>
+                        </tr>
+                    <% } %>
+                    <% if (data.IMPS) { %>
+                        <tr>
+                            <td>IMPS : </td>
+                            <td> <%= data.IMPS %> </td>
+                        </tr>
+                    <% } %>
+                    <% if (data.NEFT) { %>
+                        <tr>
+                            <td>NEFT : </td>
+                            <td> <%= data.NEFT %> </td>
+                        </tr>
+                    <% } %>
+                    <% if (data.RTGS) { %>
+                        <tr>
+                            <td>RTGS : </td>
+                            <td> <%= data.RTGS %> </td>
+                        </tr>
+                    <% } %>
+                    <% if (data.UPI) { %>
+                        <tr>
+                            <td>UPI : </td>
+                            <td> <%= data.UPI %> </td>
+                        </tr>
+                    <% } %>
+                    <% if (data.MICR) { %>
+                        <tr>
+                            <td>MICR : </td>
+                            <td> <%= data.MICR %> </td>
+                        </tr>
+                    <% } %>
+             </table>
+            <button class="btn inputControl" id="searchAgain">Search Again</button>
+
+        <% } else { %>
+            <form action="/fetch" method="post">
+                <select name="searchBy" id="searchBy" class="inputControl">
+                    <option value="ifsc">IFSC Code</option>
+                    <option value="location">Location</option>
+                </select>
+                <div id="formType">
+                    <input type="text" placeholder="Enter IFSC Code here" required class="inputControl" name="IFSC_Code">
+                    <button type="submit" class="inputControl btn">Search</button>
+                </div>
+            </form>
+        <% } %>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

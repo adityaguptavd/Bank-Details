@@ -1,0 +1,91 @@
+body{
+    background-color: steelblue;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    overflow: hidden;
+    height: 100vh;
+}
+#container{
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 20px 40px;
+}
+
+#container h1{
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+#formType{
+    min-width: 300px;
+}
+
+
+.inputControl{
+    position: relative;
+    margin: 60px 0px 40px;
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    font-size: 15px;
+    border-bottom: 2px solid #fff;
+    max-width: 300px;
+}
+
+.inputControl:focus, .inputControl:valid{
+    outline: 0;
+}
+
+.btn{
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn:focus{
+    transform: scale(0.98);
+}
+
+form input:focus{
+    transform: scale(1.05);
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border-bottom: 2px solid #fff;
+    font-size: 15px;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+td:last-child{
+    padding-left: 40px;
+    padding-bottom: 15px;
+}
+
+option{
+    color: black;
+}
